@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="leen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+</head>
+<body>
+
+
+    <header class="header">
+        <a href="#" class="logo">
+          <img src="images/logo-removebg-preview.png" alt="Coffee shop logo" />
+        </a>
+        <nav class="navbar">
+          <a href="../Homepage/index.html">Home</a>
+          <a href="../About Us/AboutUs.html">About Us</a>
+          <a href="Menu/coffee.html">Menu</a>
+          <a href="../customize page/customize page/customize.html">Customize</a>
+          <a href="../ReviewPage/review.html">Review</a>
+          <a href="../Login/SignIn1.html" class="user-icon">
+            <i class="fa fa-user"></i> 
+          </a>
+        </nav>
+        <div class="icons">
+          <img
+            id="search-btn"
+            src="images/search_icon-removebg-preview.png"
+            alt="search"
+          />
+  
+          <img
+            id="cart-btn"
+            src="images/cart-removebg-preview.png"
+            alt="add to cart"
+          />
+         
+        </div>
+      </header>
+
+    <div class="menu">
+        <h2 class="title">Menu</h2>
+        <div class="nav">
+            <button class="category"><a href="frapess.html">Frappes</a></button>
+            <button class="category"><a href="latte.html">Latte</a></button>
+            <button class="category"><a href="coffee.html">Coffee</a></button>
+            <button class="category"><a href="dessert.html">Desserts</a></button>
+            <button class="category"><a href="specialitems.html">Special Items</a></button>
+        </div>
+        
+        <div class="recommendedsection">
+            <h3>Most Recommended</h3>
+            <div class="product">
+                <div class="productimage">
+                    <img class="image" src="images\caramelfrappe.jpeg" alt="Caramel Frappe" title="Caramel Frappe">
+                </div>          
+                <div class="productinfo">
+                    <h4 class="description">Caramel Frappe</h4>
+                    <p class="description">A Caramel Frappe is made with blended ice, coffee, milk, caramel syrup, and whipped cream.</p>
+                </div>
+                <div class="product-actions">
+                    <p class="price">5$</p>
+                    <button class="add" data-name="Caramel Frappe" data-price="2" data-image="images/caramelfrappe.jpeg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="productimage">
+                    <img class="image" src="images\IrishFrappe.jpeg" alt="Irish Frappe" title="Irish Frappe">
+                </div>
+                <div class="productinfo">
+                    <h4 class="description">Irish Frappe</h4>
+                    <p class="description">An Irish Frappe is a blended drink made with coffee, Irish whiskey, ice, and cream.</p>
+                </div>
+                <div class="product-actions">
+                    <p class="price">4$</p>
+                    <button class="add" data-name="Irish Frappe" data-price="3" data-image="images/IrishFrappe.jpeg">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="categorysection">
+            <h3>Frappes</h3>
+            <div class="product">
+                <div class="productimage">
+                    <img class="image" src="images\MochaFrappé.jpeg" alt="Mocha Frappe" title="Mocha Frappe">
+                </div>
+                <div class="productinfo">
+                    <h4 class="description">Mocha Frappe</h4>
+                    <p class="description">A Mocha Frappe is a blend of coffee, chocolate syrup, ice, milk, and whipped cream.</p>
+                </div>
+                <div class="product-actions">
+                    <p class="price">4$</p>
+                    <button class="add" data-name="Mocha Frappe" data-price="4" data-image="images/MochaFrappé.jpeg">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="productimage">
+                    <img class="image" src="images\WhiteMochaFrappé.jpeg" alt="White Mocha Frappe" title="White Mocha Frappe">
+                </div>
+                <div class="productinfo">
+                    <h4 class="description">White Mocha Frappe</h4>
+                    <p class="description">A White Mocha Frappe is made with ice, milk, white chocolate syrup, espresso, and whipped cream.</p>
+                </div>
+                <div class="product-actions">
+                    <p class="price">6$</p>
+                    <button class="add" data-name="White Mocha Frappe" data-price="7" data-image="images/WhiteMochaFrappé.jpeg">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-container">
+        <h2>Your Cart</h2>
+    </div>
+
+    
+
+    <script>
+        let cart = [];
+
+        function addItemToCart(product, quantity) {
+            const item = {
+                name: product.name,
+                image: product.image,
+                price: product.price,
+                quantity: quantity,
+            };
+
+            const existingItemIndex = cart.findIndex(
+                (cartItem) => cartItem.name === product.name
+            );
+            if (existingItemIndex >= 0) {
+                cart[existingItemIndex].quantity += quantity;
+            } else {
+                cart.push(item);
+            }
+
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartContainer = document.querySelector(".cart-container");
+            cartContainer.innerHTML = "<h2>Your Cart</h2>";
+
+            if (cart.length === 0) {
+                const emptyMessage = document.createElement("p");
+                emptyMessage.textContent = "Your cart is empty.";
+                cartContainer.appendChild(emptyMessage);
+            } else {
+                let totalPrice = 0;
+                cart.forEach((item, index) => {
+                    totalPrice += item.price * item.quantity;
+
+                    const cartItem = document.createElement("div");
+                    cartItem.classList.add("cart-item");
+
+                    cartItem.innerHTML = `
+                        <div>
+                            <img src="${item.image}" alt="${item.name}" class="cart-item-img" />
+                            <div>
+                                <h4>${item.name}</h4>
+                                <p>${item.quantity} x $${item.price}</p>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="remove-btn">-</button>
+                            <button class="delete-btn">Remove</button>
+                        </div>
+                    `;
+
+                    const removeBtn = cartItem.querySelector(".remove-btn");
+                    removeBtn.addEventListener("click", () => removeItemFromCart(index));
+
+                    const deleteBtn = cartItem.querySelector(".delete-btn");
+                    deleteBtn.addEventListener("click", () => {
+                        cart.splice(index, 1);
+                        updateCart();
+                    });
+
+                    cartContainer.appendChild(cartItem);
+                });
+
+                const totalElement = document.createElement("h3");
+                totalElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
+                cartContainer.appendChild(totalElement);
+            }
+        }
+
+        function removeItemFromCart(index) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+            } else {
+                cart.splice(index, 1);
+            }
+            updateCart();
+        }
+
+        function toggleCart() {
+            const cartContainer = document.querySelector(".cart-container");
+            cartContainer.style.display =
+                cartContainer.style.display === "none" || cartContainer.style.display === ""
+                    ? "block"
+                    : "none";
+        }
+
+        const addButtons = document.querySelectorAll(".add");
+        addButtons.forEach((button) => {
+            button.addEventListener("click", (e) => {
+                const product = {
+                    name: e.target.getAttribute("data-name"),
+                    price: parseFloat(e.target.getAttribute("data-price")),
+                    image: e.target.getAttribute("data-image"),
+                };
+                const quantity = 1; 
+                addItemToCart(product, quantity);
+            });
+        });
+
+        const cartBtn = document.getElementById("cart-btn");
+        cartBtn.addEventListener("click", toggleCart);
+    </script>
+     <footer class="footer">
+        <div id="footer-content">
+          <a href="#" class="logo1">
+            <img src="images/logo-removebg-preview.png" alt="Coffee shop'logo" />
+          </a>
+          <nav class="navbar2" id="list1">
+            <a href="index.html">Home</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="#menu">Menu</a>
+            
+          </nav>
+          <nav class="navbar2" id="list2">
+            <a href="customize.html">Customize</a>
+            <a href="review.html">Review</a>
+            
+          </nav>
+          <div id="list3">
+            <li class="footer-text" id="location-text">Location</li>
+            <li class="footer-text">Hamra, Beirut</li>
+          </div>
+          <div class="icons2">
+            <p id="follow-text">Follow Us</p>
+            <div class="social-icons">
+              <img
+                src="images/facebook-icon.png"
+                alt="Facebook"
+                class="social-icon"
+              />
+              <img
+                src="images/instagram-icon.png"
+                alt="Instagram"
+                class="social-icon"
+              />
+              <img
+                src="images/tiktok-icon.png"
+                alt="TikTok"
+                class="social-icon"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div id="copyr">
+        <p id="copyright-text">Copyright &copy; All rights reserved</p>
+      </div>
+  
+      <div id="search-bar-container" style="display: none">
+        <input id="search-input" type="text" placeholder="Search here..." />
+        <div id="search-results"></div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "coffeeTypes": {
+    "Black": { "small": 4, "medium": 5, "large": 6 },
+    "Latte": { "small": 5, "medium": 6, "large": 7 },
+    "Cappuccino": { "small": 5.5, "medium": 6.5, "large": 7.5 },
+    "Americano": { "small": 4.5, "medium": 5.5, "large": 6.5 },
+    "Espresso": { "small": 3, "medium": 4, "large": 5 },
+    "Doppio": { "small": 3.5, "medium": 4.5, "large": 5.5 },
+    "Macchiato": { "small": 4.5, "medium": 5.5, "large": 6.5 },
+    "Mocha": { "small": 6, "medium": 7, "large": 8 }
+  },
+  "flavors": {
+    "Caramel": 1,
+    "Nutella": 1.5,
+    "Vanilla": 1,
+    "Honey": 1,
+    "Cinnamon": 0.5
+  },
+  "milkTypes": {
+    "Whole Milk": 1,
+    "Low-fat Milk": 1,
+    "Organic Milk": 1.5,
+    "Skimmed Milk": 1,
+    "Lactose-free Milk": 1.5,
+    "Almond Milk": 2
+  },
+
+  "drinks": {
+    "Irish Frappe": { "small": 2, "medium": 4, "large": 6 },
+    "French Press": { "small": 2, "medium": 3, "large": 5 },
+    "Caramel Macchiato": { "small": 3, "medium": 5, "large": 7 }
+  }
+}

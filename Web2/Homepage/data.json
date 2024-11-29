@@ -1,0 +1,72 @@
+{
+  "specials": [
+    {
+      "name": "French Press",
+      "image": "images/French Press.jpeg",
+      "price": "7"
+    },
+    {
+      "name": "Irish Frappe",
+      "image": "images/Irish Frappe.jpeg",
+      "price": "3"
+    },
+    {
+      "name": "Caramel Macchiato",
+      "image": "images/Caramel Macchiato.jpeg",
+      "price": "2"
+    },
+    {
+      "name": "Cinnamon Roll",
+      "image": "images/Cinnamon-roll.jpg",
+      "price": "4"
+    },
+    {
+      "name": "Red Velvet Cake",
+      "image": "images/velvet-cake.jpg",
+      "price": "7"
+    }
+  ],
+
+  "reviews": [
+    {
+      "name": "Nataly",
+      "text": "Best Coffee I've Ever Had! I always customize my coffee here the way I like. Highly Recommended.",
+      "ratingImage": "/Homepage/images/five.PNG"
+    },
+    {
+      "name": "Rami",
+      "text": "Our family has been coming to this coffee shop for years. We love the classic flavors and the friendly atmosphere.",
+      "ratingImage": "/Homepage/images/five.PNG"
+    },
+    {
+      "name": "Reem",
+      "text": "One of the best coffee shops ever! I always pass by every morning to grab my coffee and a piece of cake.",
+      "ratingImage": "/Homepage/images/five.PNG"
+    }
+  ],
+
+  "menuItems": [
+    {
+      "category": "Coffee",
+      "products": [
+        "Espresso",
+        "Lebanese Coffee",
+        "American Coffee",
+        "French Press"
+      ]
+    },
+    {
+      "category": "Latté",
+      "products": [
+        "White Mocha Latté",
+        "Hazelnut Latté",
+        "Caramel Macchiato",
+        "Irish Latté"
+      ]
+    },
+    {
+      "category": "Desserts",
+      "products": ["Cheese Cake", "Cinnamon Roll", "Lazy Cake", "Red Velvet"]
+    }
+  ]
+}

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d3ad7f;
+  width: 100vw;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0px;
+}
+
+.header .nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar {
+  margin-right: 2.9rem;
+}
+
+.logo img {
+  width: 85px;
+  height: 5rem;
+  margin-left: 2.9rem;
+}
+
+.icons img {
+  width: 32px;
+  height: 2.5rem;
+  margin-right: 2rem;
+}
+
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.header .navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+  padding-bottom: 0.5rem;
+}
+        body {
+            font-family: Arial, sans-serif;
+            background-color:  wheat;
+            color:rgb(37, 33, 33);
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: rgb(37, 33, 33);
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        h2.centered {
+            text-align: center;
+        }
+
+        h2.left {
+            text-align: left;
+        }
+
+        h2::before, h2::after {
+            font-size: 24px;
+            color: rgb(37, 33, 33);
+        }
+
+        .section {
+            background: #d3ad7f;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .line {
+           text-align: center;
+        }
+
+        .services, .team {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+
+        .card {
+            width: 150px;
+            text-align: center;
+        }
+
+        .card img {
+            display: flex;
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            
+        }
+        img{
+            
+            width: 400px;
+            height: 200px;
+            border: solid;
+            box-shadow: 100px;
+        }
+        .address {
+            text-align: left;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        .hours {
+            text-align: left;
+            padding-left: 10px;
+        }
+
+        .hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours table tr {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hours table td {
+            padding: 8px 5px;
+        }
+
+        .hours table td:first-child {
+            text-align: left;
+        }
+
+        .hours table td:last-child {
+            text-align: right;
+        }
+
+        .hours table tr:last-child td {
+            border-bottom: none;
+        }
+        .footer {
+  background-color: #d3ad7f;
+  max-height: 22.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer-content {
+  width: 100vw;
+  height: 10rem;
+  padding: 4rem;
+  padding-top: 2rem;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.logo1 img {
+  width: 9rem;
+  height: 9rem;
+}
+.navbar2 {
+  max-width: 50rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.navbar2 a {
+  text-decoration: none;
+  color: white;
+}
+
+#list1 {
+  height: 8rem;
+  width: fit-content;
+  display: flex;
+  margin: 0 0;
+  padding: 0 0;
+  padding-left: 2.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+#list2 {
+  height: 6rem;
+  width: fit-content;
+  display: flex;
+  margin: 0 0;
+  padding: 0 0;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+#list3 {
+  height: 6rem;
+  width: fit-content;
+  display: flex;
+  margin: 0 0;
+  padding: 0 0;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#list1 .footer-text:first-child {
+  font-weight: 400;
+}
+#location-text {
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+.footer-text {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  list-style-type: none;
+}
+
+.icons2 {
+  height: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#follow-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+}
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+.social-icon {
+  width: fit-content;
+  height: fit-content;
+}
+#copyr {
+  background-color: #d3ad7f;
+  margin-top: 1.5px;
+  width: 100vw;
+  height: 3rem;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#copyright-text {
+  color: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+}
+
+#search-bar-container {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  margin-right: 140px;
+  width: 15vw;
+  height: fit-content;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fff;
+  display: none;
+}
+
+#search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 3px;
+  background-color: white;
+  font-size: 14px;
+}
+
+#search-input::placeholder {
+  color: black;
+}
+
+#search-btn {
+  cursor: pointer;
+}
+
+.search-result {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.search-result:hover {
+  background-color: #d3ad7f;
+}
+    </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<header class="header">
+    <a href="#" class="logo">
+      <img src="images/logo-removebg-preview.png" alt="Coffee shop logo" />
+    </a>
+    <nav class="navbar">
+      <a href="../Homepage/index.html">Home</a>
+      <a href="../About Us/AboutUs.html">About Us</a>
+      <a href="../Menu/coffee.html">Menu</a>
+      <a href="../customize page/customize page/customize.html">Customize</a>
+      <a href="../ReviewPage/review.html">Review</a>
+      <a href="../Login/SignIn1.html" class="user-icon">
+        <i class="fa fa-user"></i> 
+      </a>
+    </nav>
+    <div class="icons">
+      <img
+        id="search-btn"
+        src="images/search_icon-removebg-preview.png"
+        alt="search"
+      />
+
+      <img
+        id="cart-btn"
+        src="images/cart-removebg-preview.png"
+        alt="add to cart"
+      />
+      <!-- Cart Container (initially hidden) -->
+      <div class="cart-container" style="display: none">
+        <h2>Your Cart</h2>
+        <!-- Cart items will be dynamically added here -->
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </header>
+<body>
+    <div class="container">
+       
+        <div class="section">
+            <h2 class="centered">Our Story</h2>
+            <div class="line"> Our coffee shop started as a small family business with a passion for great coffee and a warm, welcoming atmosphere. Over the years, we've grown into a beloved local spot where friends and family gather to enjoy good company and even better coffee.</div>
+        </div>
+
+        
+        <div class="section">
+            <h2 class="centered">Our Services</h2>
+            <div class="services">
+                <div class="card"><b>☕ Freshly Brewed Coffee</b>
+                   <p> Enjoy a variety of freshly brewed coffee, from rich espressos to smooth lattes, made from the finest beans sourced from around the world.</p></div>
+                <div class="card"><b>🛋️ Cozy Ambiance</b>
+                <p>Relax and unwind in our cozy, welcoming atmosphere, perfect for catching up with friends, studying, or enjoying some quiet time.</p></div>
+                <div class="card"><b>📶 Free Wi-Fi</b>
+                <p>Stay connected with complimentary high-speed Wi-Fi, ideal for remote work or casual browsing while you sip your coffee.</p></div>
+            <div class="card"><b>🎨 Custom Orders & Catering</b>
+                <p>Planning an event? We offer custom orders and catering services for meetings, parties, and special occasions.</p></div>
+           
+            <div class="card"><b>☎️ Online Orders & Delivery</b>
+                <p>Order your favorite coffee and snacks online and have them delivered to your doorstep for ultimate convenience.</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+       
+        <div class="section">
+            <h2 class="centered">Our Team</h2>
+            <div class="team">
+                <div class="card">
+                    <img src="Chef 4.jfif" alt="Team Member 1">
+                    <div class="description">
+                        <h4>John Doe</h4>
+                        <p>CEO & Founder</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Chef 3.jfif" alt="Team Member 2">
+                    <div class="description">
+            
+                        <h4> Mira Smith</h4>
+                        <p>Project Manager</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Chef 2.jfif" alt="Team Member 3">
+                    <div class="description">
+                        <h4>Alex Brown</h4>
+                        <p>Lead Developer</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="Chef 1.jfif" alt="Team Member 4">
+                    <div class="description">
+                        <h4>Sara White</h4>
+                        <p>Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="left">Address</h2>
+            <div class="address">
+                <p>RHU UNI , MESHREF , Firt Compound</p>
+            </div>
+        </div>
+
+       
+        <div class="section hours">
+            <h2 class="left">Opening Hours</h2>
+            <table>
+                <tr>
+                    <td>Monday</td>
+                    <td>9:00 AM - 11:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>9:00 AM - 11:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>9:00 AM - 11:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>9:00 AM - 11:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>9:00 AM - 11:00 PM</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <td>Sunday</td>
+                    <td>9:00 AM - 3:00 AM</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer class="footer">
+        <div id="footer-content">
+          <a href="#" class="logo1">
+            <img src="images/logo-removebg-preview.png" alt="Coffee shop'logo" />
+          </a>
+          <nav class="navbar2" id="list1">
+            <a href="index.html">Home</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="#menu">Menu</a>
+            
+          </nav>
+          <nav class="navbar2" id="list2">
+            <a href="customize.html">Customize</a>
+            <a href="review.html">Review</a>
+            
+          </nav>
+          <div id="list3">
+            <li class="footer-text" id="location-text">Location</li>
+            <li class="footer-text">Hamra, Beirut</li>
+          </div>
+          <div class="icons2">
+            <p id="follow-text">Follow Us</p>
+            <div class="social-icons">
+              <img
+                src="images/facebook-icon.png"
+                alt="Facebook"
+                class="social-icon"
+              />
+              <img
+                src="images/instagram-icon.png"
+                alt="Instagram"
+                class="social-icon"
+              />
+              <img
+                src="images/tiktok-icon.png"
+                alt="TikTok"
+                class="social-icon"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div id="copyr">
+        <p id="copyright-text">Copyright &copy; All rights reserved</p>
+      </div>
+  
+      <div id="search-bar-container" style="display: none">
+        <input id="search-input" type="text" placeholder="Search here..." />
+        <div id="search-results"></div>
+      </div>
+
+</body>
+</html>

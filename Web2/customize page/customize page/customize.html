@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customization Page</title>
+    <link rel="stylesheet" href="customize.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script src="customize.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="logo-removebg-preview.png" alt="Coffee shop logo" />
+      </a>
+      <nav class="navbar">
+        <a href="../../Homepage/index.html">Home</a>
+        <a href="../../About Us/AboutUs.html">About Us</a>
+        <a href="../../Menu/coffee.html">Menu</a>
+        <a href="../customize page/customize.html">Customize</a>
+        <a href="../../ReviewPage/review.html">Review</a>
+        <a href="../../Login/SignIn1.html" class="user-icon">
+          <i class="fa fa-user"></i> 
+        </a>
+      </nav>
+      <div class="icons">
+        <img
+          id="search-btn"
+          src="search_icon-removebg-preview.png"
+          alt="search"
+        />
+
+        <img
+          id="cart-btn"
+          src="cart-removebg-preview.png"
+          alt="add to cart"
+        />
+        <!-- Cart Container (initially hidden) -->
+        <div class="cart-container" style="display: none">
+          <h2>Your Cart</h2>
+          <!-- Cart items will be dynamically added here -->
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </header>
+    <div class="image">
+      <img
+        src="cImage.jpeg"
+        alt="Coffee Image"
+        width="300"
+        height="300"
+        loading="eager"
+      />
+    </div>
+    <div id="nameD">
+      <input type="text" placeholder="Name Your Drink" />
+    </div>
+    <form id="form1" action="/customize.html">
+      <select id="select1" style="width: 350px" required>
+        <option value="" hidden>
+          If your drink already exists, select please
+        </option>
+      </select>
+    </form>
+    <div id="yourC">
+      <h1>Your Creation</h1>
+    </div>
+    <div id="boxes">
+      <div class="ingredients">
+        <h2>INGREDIENTS</h2>
+        <form id="form2" class="form" action="/customize.html">
+          <select class="select" style="width: 350px" required>
+            <option value="" hidden>Choose Your Coffee Type</option>
+            <option value="Black">Black</option>
+            <option value="Latte">Latte</option>
+            <option value="Cappuccino">Cappuccino</option>
+            <option value="Americano">Americano</option>
+            <option value="Espresso">Espresso</option>
+            <option value="Doppio">Doppio</option>
+            <option value="Macchiato">Macchiato</option>
+            <option value="Mocha">Mocha</option>
+          </select>
+        </form>
+        <form id="form3" class="form" action="/customize.html">
+          <select class="select" style="width: 350px" required>
+            <option value="" hidden>Add Your Flavor:</option>
+            <option value="Caramel">Caramel</option>
+            <option value="Nutella">Nutella</option>
+            <option value="Vanilla">Vanilla</option>
+            <option value="Honey">Honey</option>
+            <option value="Cinnamon">Cinnamon</option>
+          </select>
+        </form>
+        <div class="milk-ch">
+          <input type="checkbox" id="addMilkCheckbox" />
+          <label for="addMilkCheckbox">Add Milk to the Drink</label>
+        </div>
+        <form
+          id="form4"
+          class="form"
+          action="/customize.html"
+          style="display: none"
+        >
+          <select class="select" id="selectM" style="width: 350px">
+            <option value="" hidden>Milk Type:</option>
+            <option value="Whole Milk">Whole Milk</option>
+            <option value="Low-fat Milk">Low-fat Milk</option>
+            <option value="Organic Milk">Organic Milk</option>
+            <option value="Skimmed Milk">Skimmed Milk</option>
+            <option value="Lactose-free Milk">Lactose-free Milk</option>
+            <option value="Almond Milk">Almond Milk</option>
+          </select>
+        </form>
+      </div>
+      <div class="creation">
+        <div class="creation-options">
+          <div class="cold-hot">
+            <h4>How Do You Like Your Coffee?</h4>
+            <div class="cold">
+              <input type="radio" name="radio" id="coldRadio" />
+              <label id="cold" for="coldRadio">Cold</label>
+            </div>
+            <div class="hot">
+              <input type="radio" name="radio" id="hotRadio" />
+              <label for="hotRadio">Hot</label>
+            </div>
+          </div>
+          <div class="cup-size">
+            <h4>Select Your Cup Size:</h4>
+            <div>
+              <input type="radio" name="size" value="small" />
+              <label>Small</label>
+            </div>
+            <div>
+              <input type="radio" name="size" value="medium" />
+              <label>Medium</label>
+            </div>
+            <div>
+              <input type="radio" name="size" value="large" />
+              <label>Large</label>
+            </div>
+          </div>
+
+          <textarea placeholder="Additional Notes"></textarea>
+        </div>
+        <div class="price-cart">
+          <label id="price">Total Price:<span></span><br /></label>
+          <button id="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="full-footer">
+    <footer class="footer">
+      <div id="footer-content">
+        <a href="#" class="logo1">
+          <img src="logo-removebg-preview.png" alt="Coffee shop'logo" />
+        </a>
+        <nav class="navbar2" id="list1">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#menu">Menu</a>
+        </nav>
+        <nav class="navbar2" id="list2">
+          <a href="#customize">Customize</a>
+          <a href="#review">Review</a>
+        </nav>
+        <div id="list3">
+          <li class="footer-text" id="location-text">Location</li>
+          <li class="footer-text">Hamra, Beirut</li>
+        </div>
+        <div class="icons2">
+          <p id="follow-text">Follow Us</p>
+          <div class="social-icons">
+            <img
+              src="facebook-icon.png"
+              alt="Facebook"
+              class="social-icon"
+            />
+            <img
+              src="instagram-icon.png"
+              alt="Instagram"
+              class="social-icon"
+            />
+            <img
+              src="tiktok-icon.png"
+              alt="TikTok"
+              class="social-icon"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="copyr">
+      <p id="copyright-text">Copyright &copy; All rights reserved</p>
+    </div>
+  </div>
+  </body>
+</html>

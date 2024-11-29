@@ -1,0 +1,689 @@
+
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3)
+
+
+}
+
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+    
+
+}
+
+html::-webkit-scrollbar{
+    width:.8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius:5rem ;
+    
+}
+body{
+    background: var(--main-color);
+}
+section{
+    padding: 2rem 7%;
+
+}
+.heading{
+    text-align: center;
+    color:#fff ;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+
+}
+.heading span{
+    color:var(--bg) ;
+    text-transform: uppercase;
+
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--bg);
+    cursor: pointer;
+}
+.btn:hover{
+    letter-spacing: .2rem;
+}
+
+.header{
+    background: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header .logo img{
+    width: 70px;
+
+    height: 6rem;
+}
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+.header .navbar a:hover{
+    color: var(--bg);
+    border-bottom: .1rem solid var(--bg);
+    padding-bottom: .5rem;
+}
+.header .icons {
+    font-size: 1.5rem; /* Adjust the size of the icon */
+    padding: 0.5rem;  
+    display: inline-flex;  
+    align-items: center;
+    justify-content: center;
+    columns: #fff;
+}
+.header .icons:hover{
+    color: var(--bg);
+}
+
+.icons {
+    display: flex;               
+    gap: 2rem;                   
+    justify-content: center;     
+    align-items: center;         
+}
+
+.icons .fas {
+    font-size: 2rem;             
+    color: white;                
+    cursor: pointer;            
+    transition: color 0.3s ease; 
+}
+
+.icons .fas:hover {
+    color: var(--bg);             
+}
+
+
+
+
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 1.5rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+button:hover {
+    background-color: var(--black);
+}
+
+
+
+
+
+
+.header .search-form{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background: #fff;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+
+}
+
+
+
+
+
+
+
+/*style for reviews starts*/
+.stars i {
+    color: gold;
+}
+
+.review-form {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: #333;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    transform: translateY(60px);
+}
+.review h1{
+    transform: translateY(80px);
+    position: relative;
+   
+}
+.review h3{
+    font-size: 20px;
+    padding: 4px;
+    padding-bottom: 15px;
+}
+
+.review-form h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  
+    
+}
+.review-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.review-form .stars-rating {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    direction: rtl;
+}
+
+.review-form .stars-rating input[type="radio"] {
+    display: none;
+}
+
+.review-form .stars-rating label {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+
+.review-form .stars-rating input[type="radio"]:checked ~ label,
+.review-form .stars-rating label:hover,
+.review-form .stars-rating input[type="radio"]:checked + label,
+.review-form .stars-rating input[type="radio"]:checked ~ input[type="radio"]:checked + label {
+    color: gold; /* Highlight stars from right to left */
+}
+
+.review-form .stars-rating input[type="radio"]:checked ~ input[type="radio"]:checked + label {
+    color: gold; /* Ensure that stars to the right of the clicked star are also gold */
+}
+
+.review-form textarea {
+    width: 100%;
+    height: 80px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
+    gap: 1.5rem;
+    transform: translateY(60px);
+}
+.review .box-container .box{
+    border: 0.19rem solid var(--bg);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: ;
+}
+.review .box-container .box p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--bg);
+    padding: 2rem 0;
+}
+.review .box-container .box .user{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+.review .box-container .box .quote{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+.review .box-container .box  h3{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #fff; 
+
+}
+.review .box-container .box  .stars i{
+    font-size: 1.5rem;
+    color: var(--bg);
+    
+}
+.review .btn{
+    width: 100%;
+    padding: 12px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: var(--bg);
+    color: #fff;
+}
+.review .btn:hover{
+    background-color: #48484b;
+}
+/*style for reviews ends*/
+
+/*footer starts*/
+
+.footer {
+    background-color: #d3ad7f;
+    max-height: 22.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+  
+  #footer-content {
+    width: 100vw;
+    height: 10rem;
+    padding: 4rem;
+    padding-top: 2rem;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .logo1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .logo1 img {
+    width: 9rem;
+    height: 9rem;
+  }
+  .navbar2 {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+  }
+  
+  .navbar2 a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  #list1 {
+    height: 8rem;
+    width: fit-content;
+    display: flex;
+    margin: 0 0;
+    padding: 0 0;
+    padding-left: 2.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.3rem;
+  }
+  #list2 {
+    height: 6rem;
+    width: fit-content;
+    display: flex;
+    margin: 0 0;
+    padding: 0 0;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.3rem;
+  }
+  #list3 {
+    height: 6rem;
+    width: fit-content;
+    display: flex;
+    margin: 0 0;
+    padding: 0 0;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  #list1 .footer-text:first-child {
+    font-weight: 400;
+  }
+  #location-text {
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 0.25rem;
+  }
+  .footer-text {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    list-style-type: none;
+  }
+  
+  .icons2 {
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #follow-text {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: white;
+    margin: 0;
+  }
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  .social-icon {
+    width: fit-content;
+    height: fit-content;
+  }
+  #copyr {
+    background-color: #d3ad7f;
+    margin-top: 1.5px;
+    width: 100vw;
+    height: 3rem;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #copyright-text {
+    color: #f2f2f2;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+  }
+/*footer ends*/
+
+/*responsivness*/
+
+@media (max-width:991px){
+    html{
+        font-size:55%;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+    section{
+        padding: 2rem;
+        
+    }
+
+}
+
+@media (max-width:768px){
+ 
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position:absolute ;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        color: var(--black);
+        display: flex;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size:2rem;
+
+    }
+    .header .search-form{
+        width: 90%;
+        right: 2rem;
+
+    }
+    .footer {
+        padding: 1rem; /* Reduce padding on smaller devices */
+    }
+
+    #footer-content {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .logo1 img {
+        width: 7rem;
+        height: 7rem; /* Resize logo on smaller screens */
+    }
+
+    .navbar2 {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar2 a {
+        font-size: 1.4rem; /* Adjust font size for mobile */
+        margin: 0.5rem 0;
+    }
+
+    .footer-text {
+        font-size: 1.1rem; /* Reduce font size on mobile */
+    }
+
+    .icons2 {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .social-icons {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    
+    h2 {
+        font-size: 2rem; 
+    }
+
+    label {
+        font-size: 1.3rem; 
+    }
+
+    input {
+        font-size: 1.2rem; 
+        padding: 10px; 
+    }
+
+    button {
+        font-size: 1.3rem; 
+        padding: 10px; 
+    }
+
+    .form-section {
+        width: 80%;  
+   
+}
+
+
+}
+
+@media (max-width:450px){
+    html{
+        font-size:50%;
+    }
+    .form-section {
+        width: 90%; /
+    }
+    .form-container {
+        padding: 10px;  
+    }
+
+    .form-container h2 {
+        font-size: 2rem;
+    }
+
+    form {
+        flex-direction: column;  
+    }
+    .footer {
+        padding: 1rem; 
+    }
+
+    .logo1 img {
+        width: 5rem;
+        height: 5rem; 
+    }
+
+    .navbar2 a {
+        font-size: 1.2rem; /* Further reduce font size */
+        margin: 0.5rem 0;
+    }
+
+    .footer-text {
+        font-size: 1rem; /* Further reduce font size */
+    }
+
+    #copyright-text {
+        font-size: 0.9rem; /* Smaller font size for copyright */
+    }
+
+    .social-icons {
+        gap: 0.8rem; /* Reduce space between social icons */
+    }
+   
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        padding: 2rem; /* Add padding for small devices */
+    }
+    
+    #footer-content {
+        padding: 2rem;
+        flex-direction: column;
+        align-items: center; /* Center-align on smaller devices */
+    }
+
+    .navbar2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar2 a {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .footer-text {
+        font-size: 1.2rem; /* Smaller font size on tablets */
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+    .forms-container {
+        gap: 30px; 
+    }
+
+    .form-section {
+        width: 50%; 
+        padding: 30px; 
+    }
+
+    h2 {
+        font-size: 2.3rem; 
+    }
+
+    input {
+        font-size: 1.3rem; 
+    }
+
+    button {
+        font-size: 1.4rem; 
+    }
+
+   
+}
+

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <link rel="stylesheet" href="style.css" />
+
+    <title>LogIn</title>
+  </head>
+
+  <body>
+
+    <!--Sign in starts-->
+
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-up">
+          <form id="sign-in" class="sign-in" aria-labelledby="sign-in-title">
+            <h2 class="title" id="sign-in-title">Sign In</h2>
+            <div class="input">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                id="login-email"
+                aria-label="Enter your email"
+              />
+            </div>
+            <div class="input">
+              <i class="fas fa-lock" aria-hidden="true"></i>
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                id="login-password"
+                required
+                aria-label="Enter your password"
+              />
+            </div>
+            <div class="remember-me">
+              <input type="checkbox" id="remember-me" name="remember-me" />
+              <label for="remember-me" aria-label="Remember me">Remember Me</label>
+            </div>
+            <a href="#">Forget Password?</a>
+            <input
+              type="submit"
+              value="Login"
+              class="btn solid"
+              aria-label="Login"
+            />
+            <p id="login-message" role="alert"></p>
+            <div class="separator">
+              <div class="line"></div>
+              <span>or Sign In with</span>
+              <div class="line"></div>
+            </div>
+            <div class="social-container">
+              <a href="#" class="social-icon" aria-label="Login with Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="Login with Google"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+            </div>
+          </form>
+
+          <form id="sign-up" class="sign-up" aria-labelledby="sign-up-title">
+            <h2 class="title" id="sign-up-title">Sign Up</h2>
+            <div class="input">
+              <i class="fas fa-user" aria-hidden="true"></i>
+              <input
+                type="text"
+                name="U-Name"
+                placeholder="Full Name"
+                required
+                aria-label="Enter your full name"
+              />
+            </div>
+
+            <div class="input">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+                aria-label="Enter your email"
+              />
+            </div>
+            <div class="input">
+              <i class="fas fa-lock" aria-hidden="true"></i>
+              <input
+                type="password"
+                id="create-password"
+                name="password"
+                placeholder="Create Password"
+                minlength="8"
+                required
+                aria-label="Create a password"
+              />
+            </div>
+            <div class="input">
+              <i class="fas fa-lock" aria-hidden="true"></i>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                placeholder="Confirm Password"
+                minlength="8"
+                required
+                aria-label="Confirm your password"
+              />
+            </div>
+
+            <div class="separator">
+              <div class="line"></div>
+              <span>Or Sign Up with</span>
+              <div class="line"></div>
+            </div>
+            <div class="social-container">
+              <a href="#" class="social-icon" aria-label="Sign up with Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="social-icon" aria-label="Sign up with Google"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+            </div>
+
+            <input
+              type="submit"
+              class="btn"
+              value="Sign up"
+              aria-label="Sign up"
+            />
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <nav class="back-nav">
+            <a href="../Homepage/index.html" class="back-link"
+              ><i class="fas fa-arrow-left"></i> Back to Home</a
+            >
+          </nav>
+          <div class="content">
+            <h3>Join Our Coffee Community</h3>
+            <p>
+              Sign up now to stay in touch with us and be part of our
+              coffee-loving community!
+            </p>
+            <button
+              class="btn transparent"
+              id="sign-up-btn"
+              aria-label="Go to Sign Up"
+            >
+              Sign up
+            </button>
+          </div>
+          <img src="images\coldcoffee.png" class="image" alt="Sign-up image" />
+        </div>
+
+        <div class="panel right-panel">
+          <nav class="back-nav">
+            <a href="../Homepage/index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+          </nav>
+          <div class="content">
+            <h3>Hello Again</h3>
+            <p>
+              Welcome back! We're thrilled to have you here, enjoy your favorite
+              brews!
+            </p>
+            <button
+              class="btn transparent"
+              id="sign-in-btn"
+              aria-label="Go to Sign In"
+            >
+              Sign in
+            </button>
+          </div>
+          <img src="images\back1.png" class="image" alt="Sign-in image" />
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js" ></script>
+  </body>
+</html>

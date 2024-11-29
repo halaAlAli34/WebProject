@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="home.css" />
+    <script src="home.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="images/logo-removebg-preview.png" alt="Coffee shop logo" />
+      </a>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="../About Us/AboutUs.html">About Us</a>
+        <a href="../Menu/coffee.html">Menu</a>
+        <a href="../customize page/customize.html">Customize</a>
+        <a href="../ReviewPage/review.html">Review</a>
+        <a href="../Login/SignIn1.html" class="user-icon">
+          <i class="fa fa-user"></i> 
+        </a>
+      </nav>
+      <div class="icons">
+        <img
+          id="search-btn"
+          src="images/search_icon-removebg-preview.png"
+          alt="search"
+        />
+
+        <img
+          id="cart-btn"
+          src="images/cart-removebg-preview.png"
+          alt="add to cart"
+        />
+        <!-- Cart Container (initially hidden) -->
+        <div class="cart-container" style="display: none">
+          <h2>Your Cart</h2>
+          <!-- Cart items will be dynamically added here -->
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </header>
+    <div class="banner">
+      <a href=""><button id="view-menu-btn">View Menu</button></a>
+    </div>
+    <div class="about-us" style="height: 58vh; width: 100vw">
+      <div class="about-content">
+        <h2 class="about-title">About Us</h2>
+        <p class="about-subtitle">Once Coffee, Always Coffee</p>
+        <p class="about-text">
+          Welcome to our coffee shop where great coffee meets a cozy
+          atmosphere!<br />Experience the love and warmth our coffee brings.<br />
+          Our coffee shop has your daily dose of hand-roasted coffee and
+          delicious sweets. It's not just about coffee, it's about creating
+          moments to savor.
+        </p>
+        <a href="#" class="read-more">Read More</a>
+      </div>
+      <div class="about-image">
+        <img src="./images/IMG_5625.jpeg" alt="" />
+      </div>
+    </div>
+    <div class="special-products">
+      <div class="intro">
+        <h2>Our Specials</h2>
+      </div>
+
+      <div class="pagination-controls">
+        <img
+          src="images/left arrow.jpeg"
+          alt="Previous"
+          class="pagination-arrow left-arrow"
+        />
+        <div class="products">
+          <div class="product-row">
+            <!-- Dynamic specials will be rendered here -->
+          </div>
+        </div>
+        <img
+          src="images/right arrow.jpeg"
+          alt="Next"
+          class="pagination-arrow right-arrow"
+        />
+      </div>
+
+      <div class="text-center">
+        <a href=""><button class="show-more-btn">Show More</button></a>
+      </div>
+    </div>
+    <div class="customize">
+      <div class="custom">
+        <h2>Fuel Your Day the Right Way</h2>
+        <h3>Customize Your Coffee</h3>
+      </div>
+      <a href=""><button id="customize-order-btn">Customize</button></a>
+    </div>
+
+    <div class="reviews"></div>
+
+    <footer class="footer">
+      <div id="footer-content">
+        <a href="#" class="logo1">
+          <img src="images/logo-removebg-preview.png" alt="Coffee shop'logo" />
+        </a>
+        <nav class="navbar2" id="list1">
+          <a href="index.html">Home</a>
+          <a href="AboutUs.html">About Us</a>
+          <a href="#menu">Menu</a>
+          
+        </nav>
+        <nav class="navbar2" id="list2">
+          <a href="customize.html">Customize</a>
+          <a href="review.html">Review</a>
+          
+        </nav>
+        <div id="list3">
+          <li class="footer-text" id="location-text">Location</li>
+          <li class="footer-text">Hamra, Beirut</li>
+        </div>
+        <div class="icons2">
+          <p id="follow-text">Follow Us</p>
+          <div class="social-icons">
+            <img
+              src="images/facebook-icon.png"
+              alt="Facebook"
+              class="social-icon"
+            />
+            <img
+              src="images/instagram-icon.png"
+              alt="Instagram"
+              class="social-icon"
+            />
+            <img
+              src="images/tiktok-icon.png"
+              alt="TikTok"
+              class="social-icon"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="copyr">
+      <p id="copyright-text">Copyright &copy; All rights reserved</p>
+    </div>
+
+    <div id="search-bar-container" style="display: none">
+      <input id="search-input" type="text" placeholder="Search here..." />
+      <div id="search-results"></div>
+    </div>
+  </body>
+</html>

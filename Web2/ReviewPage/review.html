@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee shop Website</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--header section starts-->
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="images/logo-removebg-preview.png" alt="Coffee shop logo" />
+    </a>
+    <nav class="navbar">
+      <a href="../Homepage/index.html">Home</a>
+      <a href="../About Us/AboutUs.html">About Us</a>
+      <a href="../Menu/coffee.html">Menu</a>
+      <a href="../customize page/customize page/customize.html">Customize</a>
+      <a href="review.html">Review</a>
+      <a href="../Login/SignIn1.html" class="user-icon">
+        <i class="fa fa-user"></i> 
+      </a>
+
+      
+     
+    </nav>
+    
+    <div class="icons">
+
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div> 
+    
+      
+      <!-- Cart Container (initially hidden) -->
+      <div class="cart-container" style="display: none">
+        <h2>Your Cart</h2>
+        <!-- Cart items will be dynamically added here -->
+        <button class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </header>
+<!-- header section ends -->
+
+    <!--review section starts-->
+    <section class="review" id="review">
+        <h1 class="heading"> Customer's <span> review</span></h1>
+        <div class="review-form">
+            <h3>Write a review, make someone's new favorite brew!</h3>
+            <form action="#" method="POST" id="reviewForm">
+                <!-- Customer's Name Input -->
+                <input type="text" id="customerName" placeholder="Enter your name" required>
+
+                <!-- Star Rating System -->
+                <div class="stars-rating">
+                    <input type="radio" name="rating" id="star1" value="1">
+                    <label for="star1"><i class="fas fa-star"></i></label>
+
+                    <input type="radio" name="rating" id="star2" value="2">
+                    <label for="star2"><i class="fas fa-star"></i></label>
+
+                    <input type="radio" name="rating" id="star3" value="3">
+                    <label for="star3"><i class="fas fa-star"></i></label>
+
+                    <input type="radio" name="rating" id="star4" value="4">
+                    <label for="star4"><i class="fas fa-star"></i></label>
+
+                    <input type="radio" name="rating" id="star5" value="5">
+                    <label for="star5"><i class="fas fa-star"></i></label>
+                </div>
+
+                <!-- Review Textarea -->
+                <textarea name="review" id="reviewText" placeholder="Write your review here..." required></textarea>
+
+                <!-- Hidden Date Input -->
+                <input type="hidden" id="reviewDate" name="reviewDate">
+
+                <button type="submit" class="btn">Submit Review</button>
+            </form>
+        </div>
+        <!-- Review Box Container -->
+        <div class="box-container">
+            <!-- Example Review Box -->
+            <div class="box">
+                <img src="images/sq.png" alt="quote image" class="quote">
+                <p>I can't get enough of the coffee from this shop! The flavors are so rich and vibrant.</p>
+                <img src="images/user1.png" alt="user's pic" class="user">
+                <h3>jyla jard</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>Date:23/11/2024</p>
+            </div>
+            <div class="box">
+                <img src="images\sq.png" alt="quote'image" class="quote">
+                  <p>This coffee is simply outstanding! I tried their signature blend, and it was smooth with just the right amount of acidity.</p>
+                <img src="images\user2.png" alt="user's pic" class="user">
+                <h3>john Aleo</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                   
+                 </div>
+                 <p>Date:11/11/2024</p>
+                </div>
+                <div class="box">
+                    <img src="images\sq.png" alt="quote'image" class="quote">
+                        <p>I love coming here for my morning coffee!Their cold brew is the best I’ve ever had—refreshing and full of flavor.</p>
+                    <img src="images\user3.png" alt="user's pic" class="user">
+                    <h3>carla Kan</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    
+                    </div>
+                    <p>Date:1/11/2024</p>
+                </div>
+            <!-- More reviews... -->
+        </div>
+    </section>
+    <!--review section ends-->
+    <!--Footer section-->
+    <footer class="footer">
+        <div id="footer-content">
+          <a href="#" class="logo1">
+            <img src="images/logo-removebg-preview.png" alt="Coffee shop'logo" />
+          </a>
+          <nav class="navbar2" id="list1">
+            <a href="index.html">Home</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="#menu">Menu</a>
+            
+          </nav>
+          <nav class="navbar2" id="list2">
+            <a href="customize.html">Customize</a>
+            <a href="review.html">Review</a>
+            
+          </nav>
+          <div id="list3">
+            <li class="footer-text" id="location-text">Location</li>
+            <li class="footer-text">Hamra, Beirut</li>
+          </div>
+          <div class="icons2">
+            <p id="follow-text">Follow Us</p>
+            <div class="social-icons">
+              <img
+                src="images/facebook-icon.png"
+                alt="Facebook"
+                class="social-icon"
+              />
+              <img
+                src="images/instagram-icon.png"
+                alt="Instagram"
+                class="social-icon"
+              />
+              <img
+                src="images/tiktok-icon.png"
+                alt="TikTok"
+                class="social-icon"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
+    <!--footer ends-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js\script.js"></script>
+</body>
+</html>
