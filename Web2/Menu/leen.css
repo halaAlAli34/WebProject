@@ -3,6 +3,7 @@
     --black: #13131a;
     --border: .1rem solid rgba(255, 255, 255, .3);
     --brown: rgb(37, 33, 33); 
+    --lightbrown:#8b6839;
 }
 
 * {
@@ -78,7 +79,7 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: var(--brown);
+    background: var(--lightbrown);
     border-radius: 8px;
     border: var(--border);
 }

@@ -61,11 +61,11 @@ $(document).ready(function() {
         let stars = '';
         for (let i = 0; i < 5; i++) {
             if (i < rating) {
-                stars += '<i class="fas fa-star"></i>';
+                stars += '<i class="fas fa-star"></i>'; // Full star
             } else if (i === rating) {
-                stars += '<i class="fas fa-star-half-alt"></i>';
+                stars += '<i class="fas fa-star-half-alt"></i>'; // Half star
             } else {
-                stars += '<i class="far fa-star"></i>';
+                stars += '<i class="far fa-star"></i>'; // Empty star
             }
         }
         return stars;

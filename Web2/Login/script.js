@@ -3,12 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let signInButton = document.getElementById("sign-in-btn");
   let container = document.querySelector(".container");
 
-  // Handle navigation based on the URL hash (e.g., #sign-up-form)
-  if (window.location.hash === "#sign-up") {
-    container.classList.add("sign-up-mode");
-  } else if (window.location.hash === "#sign-in") {
-    container.classList.remove("sign-up-mode");
-  }
+  
 
   // Event listeners for buttons
   signUpButton.addEventListener("click", () => {
@@ -84,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Clear form and notify success
     signUpForm.reset();
     alert("Account created successfully!");
-    window.location.href = "../home/home.html";
+    window.location.href = "../Homepage/index.html";
   });
 
   // Handling login
@@ -105,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
       message.style.color = "green";
       message.textContent = "Login successful!";
       // Redirect to the home page
-      window.location.href = "../home/home.html";
+      window.location.href = "../Homepage/index.html";
     } else {
       message.style.color = "red";
       message.textContent = "Invalid email or password. Please try again.";

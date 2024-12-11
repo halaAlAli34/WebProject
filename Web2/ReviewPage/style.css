@@ -42,7 +42,9 @@ html::-webkit-scrollbar-thumb{
     
 }
 body{
-    background: var(--main-color);
+    background: #fff;
+    height: 100%;
+    
 }
 section{
     padding: 2rem 7%;
@@ -50,7 +52,7 @@ section{
 }
 .heading{
     text-align: center;
-    color:#fff ;
+    color:var(--main-color) ;
     text-transform: uppercase;
     padding-bottom: 3.5rem;
     font-size: 4rem;
@@ -67,11 +69,12 @@ section{
     padding: .9rem 3rem;
     font-size: 1.7rem;
     color: #fff;
-    background: var(--bg);
+    background: #9f7848;
     cursor: pointer;
 }
 .btn:hover{
     letter-spacing: .2rem;
+    background-color:#c49f6b ;
 }
 
 .header{
@@ -94,7 +97,7 @@ section{
 }
 .header .navbar a{
     margin: 0 1rem;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: #fff;
 }
 .header .navbar a:hover{
@@ -195,7 +198,14 @@ button:hover {
 }
 
 
-
+.form-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100v;
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
 
 
 
@@ -206,13 +216,19 @@ button:hover {
 }
 
 .review-form {
+    width: 100%;
+    max-width: 400px;
+    position:relative;
+    margin: 0;
     margin-bottom: 3rem;
     padding: 2rem;
-    background-color: #333;
+    background-color: var(--main-color);
     border-radius: 8px;
     color: #fff;
     text-align: center;
     transform: translateY(60px);
+    margin-left: 350px;
+    margin: 0;
 }
 .review h1{
     transform: translateY(80px);
@@ -235,6 +251,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
    
 }
 
@@ -265,9 +282,10 @@ button:hover {
     color: gold; /* Highlight stars from right to left */
 }
 
-.review-form .stars-rating input[type="radio"]:checked ~ input[type="radio"]:checked + label {
-    color: gold; /* Ensure that stars to the right of the clicked star are also gold */
+.review-form .stars-rating label:hover {
+    color: gold; /* Highlight on hover */
 }
+
 
 .review-form textarea {
     width: 100%;
@@ -289,12 +307,15 @@ button:hover {
     grid-template-columns: repeat(auto-fit,minmax(30rem, 1fr));
     gap: 1.5rem;
     transform: translateY(60px);
+    padding-bottom: 20px;
+    padding-top: 30px;
+
 }
 .review .box-container .box{
     border: 0.19rem solid var(--bg);
     text-align: center;
     padding: 3rem 2rem;
-    margin-top: ;
+    background-color: var(--main-color);
 }
 .review .box-container .box p{
     font-size: 1.5rem;
@@ -324,22 +345,7 @@ button:hover {
     font-size: 1.5rem;
     color: var(--bg);
     
-}
-.review .btn{
-    width: 100%;
-    padding: 12px;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
-    background-color: var(--bg);
-    color: #fff;
-}
-.review .btn:hover{
-    background-color: #48484b;
-}
-/*style for reviews ends*/
+}/*style for reviews ends*/
 
 /*footer starts*/
 
@@ -493,7 +499,7 @@ button:hover {
 }
 
 @media (max-width:768px){
- 
+    
     #menu-btn{
         display: inline-block;
     }
@@ -587,6 +593,12 @@ button:hover {
 }
 
 
+}
+@media (max-width: 600px) {
+    .review-form {
+        width: 95%; 
+        padding: 1.5rem;
+    }
 }
 
 @media (max-width:450px){
